@@ -7,21 +7,31 @@ body {
 }
 
 .header {
-  height: 40px;
+  height: 70px;
   background: darkmagenta;
   color: white;
-  font-weight: bolder;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.CU {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
+  background-color: gainsboro;
   display: flex;
   flex-direction: column;
   height: 72px;
-  background: #eee;
   color: darkmagenta;
   font-weight: bold;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -30,36 +40,38 @@ body {
   flex: 0 0 250px;
   display: flex;
   flex-direction: column;
-  width: 800px;
   background: royalblue;
   box-sizing: border-box;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
 .card {
-  flex: 1 1 250px;
-  order: 1;
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   padding: 15px;
+  height: 300px;
+  width: 280px;
 }
 .main {
   flex: 1;
-  align-items: stretch;
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: stretch;
   gap: 20px;
 }
 .main-cards {
   flex: 1;
   order: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(100px, 200px));
   grid-template-rows: repeat(2, 1fr);
-  height: 100%;
-  gap: 15px;
+  column-gap: 160px;
+ row-gap: 5px;
+ margin: 30px;
+  padding: 20px 40px 20px 0;
+  align-items: flex-end;
 }
 .sidebar ul {
   list-style: none;
